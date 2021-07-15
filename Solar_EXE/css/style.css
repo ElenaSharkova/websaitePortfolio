@@ -1,0 +1,620 @@
+*,
+*::after;
+*before{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Noto Sans; /*Подключить шрифт на весь текст внутри body*/
+    font-size: 14px; /*Толщина текста на весь body*/
+    line-height: 19px; /*Высота строки на весь body*/
+    font-weight: 400; /*Ширина текста на весь body*/
+    color: #303030; /*Цвет текста на весь body*/
+}
+a{
+    color: inherit; /*БРАТЬ ЗНАЧЕНИЕ у родителя и не выебываться своим по умолчанию*/
+    text-decoration: none; /*Отменить подчеркиваемость ссылки*/
+}
+
+ul{
+    list-style: none; /*Убрать оформление списка*/
+}
+
+.container{
+    max-width: 1220px; /*Вообще по макету размер контейнера 1200px, но т.к. мы используем box-sizing: border-box, нужно зарезервировать место слева и справа по 10px, см. ниже*/
+    padding: 0 10px; /*снизу сверху отступ 0, слева справо по 10px, итого получается 20px*/
+    margin: 0 auto; /*чтобы конрейнер встал по центру*/
+}
+
+.title{
+    font-weight: 700; /*Ширина текста на весь title*/
+    font-size: 24px;  /*Толщина текста на весь title*/
+    line-height: 33px; /*Высота строки на весь title*/
+    color: #868585;
+    margin-bottom: 60px; /*Отступ от контента снизу 60px*/
+    text-transform: uppercase; /*Текст всегда с большой буквы*/
+}
+.header{
+    background-image: url(../images/fon.jpg); /*задний фон*/
+    height: 100vh; /*100% высоты экрана устройства, на котором просматривается сайт*/
+    background-repeat: no-repeat; /*Чтобы картинка не повторялась, если вдруг экран большой*/
+    background-size: cover; /*для растягивания картинки по размеру конкретного экрана*/
+    background-position: center; /*Отцентрировать картинку*/
+    color: #fff; /*Все элелменты внутри header белые*/
+    text-align: center; /*Отцентрировать текст всего хэдера*/
+    display: flex; /*Все элементы поставить друг за другом*/
+    flex-direction: column; /*Ось расположения элементов друг за другом сделать из горизонтальной вертикальной*/
+    justify-content: space-between; /*Раскидать элементы равномерно по ширине, но у нас раскидываются по высоте, т.к. оси поменяны местами*/
+    padding: 70px 10px 38px; /*70 сверху, 10 по бокам, 38 снизу*/    
+    margin-bottom: 150px; /*Отступ от следующего блока, идущего ниже*/
+}
+
+.header__subtitle{
+    font-size: 18px; /*Толщина текста на весь header__subtitle*/
+    line-height: 25px; /*Высота строки на весь header__subtitle*/
+    font-weight: 400; /*Ширина текста на весь header__subtitle, не сработало из body, т.к. этот класс зашит в h6, а он по-умолчанию жирный*/
+    margin-top: auto; /*Максимально оттолкнуть текст от верха*/
+}
+
+.header__title{
+    font-size: 64px; /*Толщина текста на весь header__title*/
+    line-height: 87px; /*Высота строки на весь header__title*/
+    font-weight: 700; /*Ширина текста на весь header__title*/
+}
+
+.header__title span{
+    display: block; /*Перенести на другую строку*/
+    font-size: 42px; /*Толщина текста на весь header__title span*/
+    line-height: 57px; /*Высота строки на весь header__title span*/
+}
+
+.header__button{
+    margin-bottom: auto; /*Максимально оттолкнуть кнопку снизу*/
+    margin-top: 50px; /*По проекту она сверху от предыдущего элемента отстоит на 50px*/
+    align-self: center; /*Сделать кнопочку посередине, чтобы она занимала не всю ширину, а только середину*/
+}
+
+.button__path{
+    transition: fill .5s; /*Замедление при закрашивании. Будет работать только если в html был задан fill, иначе он не определен и относительно чего замедлять вообще не ясно компу*/
+}
+
+.button:hover .button__path{
+    fill: #A9A32A; /*Задали цвет*/
+}
+
+.button__text{
+    font-size: 18px;
+    line-height: 25px;
+    display: inline-block; /*С этим спаном можно теперь работать как с блочным элементом*/
+    transform: translateY(-17px); /*Принудительный сдвиг текста влево-право*/
+    margin-left: -67px; /*Прижали к левому краю контейнера*/
+}
+
+.social{
+    display: flex; /*сделали список не в столбик, а в строчку*/
+    justify-content: center; /*Раскидать элементы равномерно в центр*/
+    align-items: center; /*Раскидать элементы равномерно в центр*/
+}
+
+.social__link{
+    padding: 0 10px; /*снизу сверху отступ 0, слева справо по 10px, итого получается 20px*/
+}
+
+.service{
+    margin-bottom: 150px; /*Расстояние вниз до след контента*/
+    
+}
+
+.service__inner{
+    display: flex /*Разделить контейнер на 2 части пополам*/
+}
+
+.service__content{
+    flex-basis: 510px; /*Размер окна в котором написан контент*/
+    margin-right: 90px; /*Размер отступа до контента справа*/
+}
+
+.service__box{
+    margin-bottom: 50px; /*Расстояние вниз до след контента*/
+}
+.service__box-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 15px; /*Расстояние вниз до след контента*/
+}
+
+.service__img{
+    object-fit: cover; /*Чтобы картинку не развозило дофига вниз и вверх при добавлении контента слева*/
+    
+}
+
+.info{
+    margin-bottom: 150px; /*Отступ до следующего раздела вниз 150px*/
+    
+}
+
+.info__inner{
+    display: flex; /*Поделили контейнер на 2 части*/
+    
+}
+
+.info__box{
+    flex-basis: 510px; /*Размер окна в котором написан контент*/
+    margin-right: 90px; /*Размер отступа до контента справа*/
+}
+
+.info__content{
+    flex-basis: 600px; /*Размер окна в котором написан контент*/
+}
+
+.info__content-text{
+    font-size: 18px; /*Толщина текста на весь header__title*/
+    line-height: 25px; /*Высота строки на весь header__title*/
+    font-weight: 700; /*Ширина текста на весь header__title*/
+    margin-bottom: 23px;  /*Расстояние вниз до след контента*/
+}
+
+.info-tabs{
+    margin-bottom: 100px; /*Расстояние вниз до след контента*/
+}
+.info-tabs__items{
+    margin-bottom: 120px; /*Расстояние вниз до след контента*/
+}
+
+.info-tabs__item{
+    font-size: 18px;
+    line-height: 25px;
+    margin-right: 40px;
+}
+
+.info-tabs__item--active{
+    /*text-decoration: underline; НЕ можем его использовать, т.к. нам нужно задать линию конкретной шириной и длинной, и отступом*/
+    padding-bottom: 5px; /*Отступ линии от текста вниз на 5px*/
+    border-bottom: 1px solid #303030; /*Толщина линии, линия сплошная, цвет линии*/
+        
+}
+
+.info-tabs__content{
+    display: none; /*Скрыть конктент*/
+}
+
+.info-tabs__content--active{
+    display: block; /*Отменить скрытие контента*/
+}
+
+.info-slider{
+    max-width: 510px;
+}
+
+.info-slider__img{
+    margin-right: 40px; /*Отступили справа 40px от текста в след. p*/
+    float: left; /*Выровнили максимально налево, чтобы текст обтекал картинку справо*/
+}
+
+.info-slider__text{
+    padding-bottom: 15px; /*Отступ линии от текста вниз на 15px, чтобы он не залез на стрелку, котораяи ниже*/
+    
+}
+
+.info-tabs__content-2{
+    display: flex; /*Поделили контейнер на 2 части*/
+}
+
+.info-slider__text{
+    padding-left: 25px;
+}
+
+
+
+.slick-arrow{
+    position: absolute; /*абсолютная позиция*/
+    left: 275px;
+    bottom: -3px;
+    z-index: 5; /*чтобы хорошо работала левая кнопка, ее нужно сделать наверх*/
+    cursor: pointer; /*чтобы все было плавненько*/
+}
+
+.slick-right{
+    left: 340px;  /*отодвинуть от левого края контейнера правый элемент*/
+}
+
+.info__list{
+    display: flex; /*Разделили контейнер напополам*/
+    flex-wrap: wrap; /*чтобы переносились, когда места будет мало*/
+    justify-content: space-between; /*раскидать по разные стороны горизонта*/
+}
+
+.info__list-item{
+    flex-basis: 235px; /*Задали размер элемента по основной горизонтальной оси*/
+    margin-bottom: 17px;
+}
+
+.info__list-title{
+    margin-bottom: 5px;
+    font-size: 18px; /*Толщина текста на весь header__title*/
+    line-height: 25px; /*Высота строки на весь header__title*/
+    font-weight: 700; /*Ширина текста на весь header__title*/
+}
+
+.blockquote{
+    padding: 128px 10px 144px;
+    background-image: url(../images/Picture_quote.jpg);
+    text-align: center;
+    background-repeat: no-repeat; /*Чтобы картинка не повторялась, если вдруг экран большой*/
+    background-size: cover; /*для растягивания картинки по размеру конкретного экрана*/
+    background position: center; /*Отцентрировать картинку*/
+    color: #fff; /*Все элелменты внутри header белые*/
+    margin-bottom: 150px; /*Отступ до следующего раздела вниз 150px*/
+}
+
+.blockquote__text{
+    max-width: 670px; /*Максимальная ширина*/
+    margin: 0 auto;/*Чтобы был по центру*/
+    font-size: 42px; /*Толщина текста на весь header__title*/
+    line-height: 57px; /*Высота строки на весь header__title*/
+    color: #fff; /*Текст максимально белый*/
+    
+}
+
+.clients{
+    margin-bottom: 150px;
+}
+
+.clients-slider__box{
+    display: flex;
+}
+
+.clients-slider__box-img{
+    flex-basis: 510px; /*Задали размер элемента по основной горизонтальной оси*/
+    margin-right: 90px;
+    margin-bottom: 30px;
+    
+}
+
+.clients-slider__box-title{
+   max-width: 478px; 
+   font-size: 18px;
+   line-height: 25px;
+   font-weight: 700;
+   margin-bottom: 30px;
+}
+
+.clients-slider__box-list{
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.clients-slider__box-item{
+    margin-bottom: 15px;
+}
+
+.slick-arrow:hover path{
+    fill: #A9A32A; /*задали цвет при наведении на срелочку*/
+}
+
+.slick-arrow path{
+    transition: .5s; /*для плавности при наведении на стрелочку*/
+}
+.step{
+    margin-bottom: 150px;
+    
+}
+
+.step__inner{
+    display: flex;
+}
+
+.step__img{
+    flex-basis: 600px; /*фиксированный размер картинки с макета*/
+    object-fit: cover; /*Чтобы картинку не развозило дофига вниз и вверх при добавлении контента слева*/
+}
+
+.step__content{
+    margin-right: 90px; /*отступ справа 90px от картинки*/
+}
+
+.step__list{
+    list-style: none; /*убрали стили по умолчанию у номерованного списка*/
+    counter-reset: number; /*очистили нумерацию и задали новую совместно с .step__list-item{
+    counter-increment: number;*/
+}
+
+.step__list-item{
+    counter-increment: number;/*очистили нумерацию и задали новую совместно с .step__list-item{
+                               counter-reset: number;*/
+    margin-bottom: 30px;
+}
+
+.step__list-item::before{
+    content: '0' counter(number);
+    margin-bottom: 11px;
+    color: #868585;
+}
+
+.step__list-item:nth-child(n+10)::before{
+     content: counter(number);
+}
+
+.step__list-title{
+    margin-bottom: 2px;
+    max-width: 478px; 
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 700;
+}
+
+.footer{
+    background-image: url(../images/Footer.jpg);
+    background-repeat: no-repeat;/*Чтобы картинка не повторялась, если вдруг экран большой*/
+    background-size: cover; /*для растягивания картинки по размеру конкретного экрана*/
+    background position: center; /*Отцентрировать картинку*/
+    color: #fff; /*Все элелменты внутри footer белые*/
+    padding: 70px 0 50px; /*70 сверху, 0 по бокам, 50 снизу*/ 
+}
+.footer__top{
+    display: flex;
+    margin-bottom: 150px;  
+}
+
+.footer__form{
+    flex-basis: 510px;/*фиксированная ширина 510px */
+    margin-right: 90px;/*отступ справа от след компонента 90px*/
+}
+.footer__title{
+   font-size: 24px;
+   line-height: 43px;
+   font-weight: 700;
+   text-transform: uppercase; /*чтобы все пропечаталось сразу с большой буквы*/
+   margin-bottom: 60px;
+}
+
+.footer__input{
+    border: none; /*убрали рамку*/
+    border-bottom: 1px solid #fff; /*подчеркивание снизу 1px толщиной, сплошная, белого цвета*/
+    display: block; /*перенести формы на разные строчки*/
+    width: 100%; /*ширина формы 100%*/
+    background-color: transparent; /*задний фон формы прозрачный*/
+    padding-bottom: 11px; /*отступ вниз 11px*/
+    font-family: Noto Sans; /*Подключить шрифт на весь текст внутри footer__input*/
+    font-size: 14px; /*Толщина текста на весь footer__input*/
+    line-height: 19px; /*Высота строки на весь footer__input*/
+    font-weight: 400; /*Ширина текста на весь footer__input*/
+    color: #fff; /*Цвет текста на весь footer__input*/
+    margin-bottom: 60px;
+}
+
+.footer__input::placeholder{
+    font-family: Noto Sans; /*Подключить шрифт на весь текст внутри footer__input*/
+    font-size: 14px; /*Толщина текста на весь footer__input*/
+    line-height: 19px; /*Высота строки на весь footer__input*/
+    font-weight: 400; /*Ширина текста на весь footer__input*/
+    color: #fff; /*Цвет текста на весь footer__input*/
+    border: none;/*убрали рамку*/
+}
+
+.footer__form-btn{
+    background-color: transparent; /*задний фон формы прозрачный*/
+    border: none;/*убрали рамку*/
+    padding: 0;/*отсутствие отступов*/
+    color: #fff;
+}
+
+.footer__contacts-item{
+    font-size: 18px; /*Толщина текста на весь footer__input*/
+    line-height: 25px; /*Высота строки на весь footer__input*/
+    font-weight: 400; /*Ширина текста на весь footer__input*/
+    margin-bottom: 35px;
+}
+
+.footer__bottom{
+     display: flex;
+     justify-content: space-between; /*раскидать по разные стороны горизонта*/
+     align-items: center; /*Раскидать элементы равномерно в центр*/
+}
+
+.footer .social{
+    margin-right: -10px;
+} 
+
+@media (max-width: 1240px){
+    .header{
+        margin-bottom: 50px;
+    }
+    .info__inner{
+        flex-wrap: wrap-reverse; /*можно перенести элемент в данном случае картинку на другую строку и поменять местами последовательность блоков*/  
+    }
+    .info__box{
+        
+    }
+    .info__content{
+        flex-basis: 100%/*растянуть на весь экран*/
+       
+    }
+    .info__contant-img{
+        display: none;
+    }
+    .info__box{
+        flex-basis: 100%;/*растянуть на весь экран*/
+        margin-right: 0;
+        display: flex;
+    }
+    .info__list{
+        align-self: flex-start; /*приподняли веь контент вверх, чтобы его не разфигачивала на всю высоту*/
+        margin-left: 40px; 
+    }
+    .info-tabs__items{
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 1024px){
+    .service__inner{
+        flex-wrap: wrap; /*можно перенести элемент в данном случае картинку на другую строку*/  
+    }
+    .service__content{
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+    .service__img{
+        width: 100%;
+        height: 400px;
+    }
+    .step__inner{
+        flex-wrap: wrap;/*можно перенести элемент на другую строку*/
+    }
+    .step__content{
+        margin-right: 0;
+    }
+    .step__img{
+        object-fit: cover;/*Чтобы картинку не развозило дофига вниз и вверх при добавлении контента слева*/
+        height: 400px;
+        flex-basis: 100%;/*если не работает ширина 100%*/
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 960px){
+    .clients-slider__box{
+        display: block;/*Все элементы поставить друг за другом, за счет того, что мы их сделали блочными*/
+    }
+    .clients-slider__box-title{
+        max-width: 100%;
+    }
+    .clients-slider__box-img{
+        width: 100%;
+        object-fit: cover;/*Чтобы картинку не развозило дофига вниз и вверх при добавлении контента слева*/
+        height: 300px;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 826px){
+    .info__box{
+        flex-wrap: wrap;/*можно перенести элемент на другую строку*/
+    }
+    .info__list{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px){
+    .header__title{
+       font-size: 48px; /*Толщина текста на весь header__title*/
+       line-height: 56px; /*Высота строки на весь header__title*/
+    }
+    .header__title span{
+       font-size: 32px; /*Толщина текста на весь header__title*/
+       line-height: 40px; /*Высота строки на весь header__title*/
+    }
+    .blockquote{
+        padding: 60px 10px 80px;
+    }
+    .blockquote__text{
+       font-size: 28px; /*Толщина текста на весь header__title*/
+       line-height: 32px; /*Высота строки на весь header__title*/
+    }
+    .footer__top{
+        flex-wrap: wrap; /*выстроили друг за другом*/
+    }
+    .footer__form{
+        flex-basis: 100%;/*если не работает ширина 100%*/
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+    .footer__bottom{
+        flex-wrap: wrap; /*выстроили друг за другом*/
+        justify-content: center; /*все элементы центрированы*/
+    }
+    .footer__bottom .logo{
+        width: 100%;
+        margin: 20px 0;/*сверху снизу 20px, по бокам 0*/
+        text-align: center;
+    }
+}
+@media (max-width: 640px){
+    .header,
+    .service,
+    .info,
+    .blockquote,
+    .clients,
+    .step,
+    .footer__top{
+        margin-bottom: 75px;
+    }
+}
+
+@media (max-width: 540px){
+    .header__title{
+       font-size: 32px; /*Толщина текста на весь header__title*/
+       line-height: 38px; /*Высота строки на весь header__title*/
+    }
+     .header__title span{
+       font-size: 22px; /*Толщина текста на весь header__title*/
+       line-height: 28px; /*Высота строки на весь header__title*/
+    }
+    .header__subtitle{
+       font-size: 16px; /*Толщина текста на весь header__subtitle*/
+       line-height: 22px; /*Высота строки на весь header__subtitle*/
+    }
+    .info-slider{
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .info-slider__img{
+        width: 250px;
+        margin-right: 0;
+        margin-bottom: 25px;
+        float: none;
+        height: 200px;
+        object-fit: cover;/*Чтобы картинку не развозило дофига вниз и вверх при добавлении контента слева*/
+    }
+    .slick-left{
+        left: calc(50% - 50px);/*двигаем стрелочки слайдера под адаптив,изначально расстояние между ними 60px*/
+    }
+    .slick-right{
+        left: calc(50% + 10px);/*двигаем стрелочки слайдера под адаптив, изначально расстояние между ними 60px*/
+    }
+    .info__list{
+        display: block;/*Все элементы поставить друг за другом, за счет того, что мы их сделали блочными*/
+    }
+    .info-tabs__item{
+        margin-right: 0;
+        padding: 10px;
+        display: block;/*Все элементы поставить друг за другом, за счет того, что мы их сделали блочными*/
+        text-align: center;
+    }
+    .clients-slider__box-list{
+        margin-left: 0;
+    }
+    
+}
+
+@media (max-width: 375px){
+    .button__text{
+       margin-left: -76px; /*Прижали к левому краю контейнера*/
+    }
+    .title{
+        margin-bottom: 40px;
+    }
+    .service__box{
+        margin-bottom: 30px;
+    }
+    .blockquote__text{
+       font-size: 22px; /*Толщина текста на весь header__title*/
+       line-height: 28px; /*Высота строки на весь header__title*/
+    }
+}
+@media (max-width: 340px){
+    .info-slider{
+        max-width: 280px;
+}
+
+    
+
+
+
+
+
+
+
