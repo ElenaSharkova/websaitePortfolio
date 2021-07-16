@@ -38,9 +38,8 @@ a{
     background-repeat: no-repeat; /*запрещаем картинке повторяться*/
     background-size: cover;/*для растягивания картинки по размеру конкретного экрана*/
     background-position: bottom center; /*Отцентрировать картинку и подтянуть все что не видно внизу*/
-    
-    margin-bottom: 60px;/*отступ снизу*/
     text-align: center;
+    margin-bottom: 60px;
     color: #000;
     display: flex; /* Все элементы в ширину в одну линию друг за другом встали*/
     flex-direction: column; /* Возвращает элементы обратно друг за другом вертикально*/
@@ -49,8 +48,6 @@ a{
     padding-right: 15px;
     padding-top: 65px;
     padding-bottom: 260px;
-    
-    /*padding: 190px 15px; /*Отступы для аддаптива*/
 }
 
 .header__title{
@@ -71,6 +68,10 @@ a{
     display: block;
     margin-bottom: 85px;
     color: aliceblue;
+}
+
+.btn__path{
+    transition: fill .5s; /*для ПЛАВНОСТИ при наведении на стрелочку, НЕ ЗАБУДЬ посмотреть есть ли во всех svg в html fill="transparent"*/
 }
 
 /* Закраска внутри SVG элемента*/
@@ -133,10 +134,64 @@ a{
     
 }
 
+.footer{
+    background-color: #C4C4C4;
+    margin-top: 60px;
+    padding: 20px 15px;
+}
+.footer__inner{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    
+}
 
+.footer__form{
+    max-width: 383px;
+    margin: 0 auto;
+}
 
+.footer__form-title{
+    margin-bottom: 50px;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'RobotoCondensed-Light';
+    color: #fff;
+}
 
+.contact__form-input{
+    display: block;
+    border: 1px solid #888888;
+    margin-bottom: 20px;
+    height: 30px; /*высота полей ввода*/
+    width: 100%;
+    padding: 0 21px; /*Отступы внутри инпута*/
+    font-size: 14px; /*Свойства текста внутри инпута*/
+    line-height: 21px; /*Свойства текста внутри инпута*/
+    font-family: 'RobotoCondensed-Regular';/*Свойства текста внутри инпута*/
+    
+}
 
+/*Задать цвет текста внутри инпута*/
+.contact__form-input::placeholder{
+    color: #888888;
+}
+
+.footer__contacts{
+    padding-left: 50px;
+}
+
+.footer__form-btn{
+    font-weight: 300;
+    font-size: 14px; /*Свойства текста внутри инпута*/
+    line-height: 21px; /*Свойства текста внутри инпута*/
+    font-family: 'RobotoCondensed-Regular';
+    border: 1px solid #fff;
+    background-color: transparent; /*Цвет кнопки совпадает с цветом фона, она будто становится прозрачной*/
+    padding: 12px 45px;
+    color: #fff; /* Цвет текста внутри кнопки*/
+    cursor: pointer; /*Чтобы при наведении на кнопку появлялась рука у курсора*/
+}
 
 
 
