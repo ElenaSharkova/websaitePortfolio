@@ -78,7 +78,7 @@ a{
 .container{
     max-width: 1230px; /*максимальная ширина контейнера*/
     margin: 0 auto; /*ВНЕШНИЕ отступы*/
-    padding: 20px 15px; /*ВНУТРЕННИЕ отступы*/
+    padding: 10px 15px; /*ВНУТРЕННИЕ отступы*/
     display: flex;
     justify-content: space-between;
 
@@ -94,3 +94,59 @@ a{
     text-align: center;
     font-weight: 400;/*толщина текста*/
 }
+
+.content__inner{
+    padding: 20px 0;
+    text-align: center;
+}
+
+.content__img{
+    width: 280px;/*все картинки будут такого размера, не важно какого размера вставляется*/
+    height: 280px;/*все картинки будут такого размера, не важно какого размера вставляется*/
+    border-radius: 50%; /*сделать картинку круглой, не важно круглой она вставлена или нет*/
+    object-fit: cover; /*сохранить пропорции картинки*/
+}
+
+.content__item-title{
+    padding: 30px 0;
+    font-size: 24px;
+    line-height: 24px;
+    color: #888888;
+    font-weight: 400;
+}
+
+.content__link{
+    background-color: #C4C4C4; /*цвет кнопки*/
+    color: #fff; /*цвет текста внутри кнопочки*/
+    padding: 13px 48px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
