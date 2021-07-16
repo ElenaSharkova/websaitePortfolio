@@ -39,7 +39,7 @@ a{
     background-size: cover;/*для растягивания картинки по размеру конкретного экрана*/
     background-position: bottom center; /*Отцентрировать картинку и подтянуть все что не видно внизу*/
     font-family: 'Roboto Condensed', sans-serif;
-    margin-bottom: 100px;/*отступ снизу*/
+    margin-bottom: 60px;/*отступ снизу*/
     
 
 }
@@ -75,3 +75,22 @@ a{
     
 }
 
+.container{
+    max-width: 1230px; /*максимальная ширина контейнера*/
+    margin: 0 auto; /*ВНЕШНИЕ отступы*/
+    padding: 20px 15px; /*ВНУТРЕННИЕ отступы*/
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.content__title{
+    background-color: #C4C4C4;;
+    color: #fff;
+    font-size: 40px;
+    line-height: 64px;
+    font-family: 'RobotoCondensed-Light'; 
+    padding: 18px 15px;/*отступы текста от краев области*/
+    text-align: center;
+    font-weight: 400;/*толщина текста*/
+}
