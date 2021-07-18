@@ -17,13 +17,13 @@
                <nav class="menu">
                    <ul class="menu__list">
                        <li class="menu__list-item">
-                           <a class="menu__list-link" href="#">Маршрут</a>
+                           <a class="menu__list-link" href="#Маршрут">Маршрут</a>
                        </li>
                        <li class="menu__list-item">
-                           <a class="menu__list-link" href="#">Отель</a>
+                           <a class="menu__list-link" href="#Отель">Отель</a>
                        </li>
                        <li class="menu__list-item">
-                           <a class="menu__list-link" href="#">Стоимость</a>
+                           <a class="menu__list-link" href="#Стоимость услуг">Стоимость</a>
                        </li>
                    </ul>
                </nav>
@@ -83,7 +83,7 @@
    </section>
    <section class="our-trip page-section">
       <div class="container">
-           <h3 class="title fairy-tail__title">
+           <h3 id="Маршрут" class="title fairy-tail__title">
                Our trip
                <span>Маршрут</span>
            </h3>
@@ -119,7 +119,7 @@
                           <li>Трансфер в Анкару</li>
                           <li>Вылет в Киев</li>
                       </ul>
-                      <a class="our-trip_btn" href="#">ЗАБРОНИРОВАТЬ</a>
+                      <a class="our-trip_btn" href="#Забронировать">ЗАБРОНИРОВАТЬ</a>
                    </div>
                </div>
            </div>
@@ -138,7 +138,7 @@
    </section>
    <section class="hotel page-section">
        <div class="container">
-           <h3 class="title hotel__title">
+           <h3 id="Отель"class="title hotel__title">
                Hotel
                <span>Sultan Cave Suites</span>
            </h3>
@@ -166,7 +166,7 @@
    </section>
    <section class="price page-section">
        <div class="container">
-            <h3 class="title prise__title">
+            <h3 id="Стоимость услуг" class="title prise__title">
                Prise
                <span>Стоимость услуг</span>
            </h3>
@@ -194,32 +194,62 @@
            </div>
        </div>
    </section>
-   <section class="contacts page-section">
+   
+   <section id="Забронировать" class="contacts page-section">
        <div class="container">
             <div class="contacts__inner">
                 <div class="contacts__content">
                 <div class="contacts__info">
-                    <div class=" title contacts__data">
+                    <div class="contacts__date">
                     1.07.2021
                     <span>Ближайшая дата тура </span>
                     </div>
-                    <div class=" title contacts__price">
+                    <div class="contacts__price">
                        490$
                         <span>Стоимость</span>
                     </div>
                 </div>
                 <form class="contacts__form">
-                   <h4 class="contacts__form-title">Оставить заявку или задать вопрос</h4>
-                    <input class="contacts__form-name" type="text" >
-                    <input class="contacts__form-phone" type="phone" >
+                    <h4 class="contacts__form-title">Оставить заявку или задать вопрос</h4>
+                    
+                    <!-- Hidden Required Fields -->
+		            <input type="hidden" name="project_name" value="Cappadocia">
+		            <input type="hidden" name="admin_email" value="lena.sharkova.97@inbox.ru">
+		            <input type="hidden" name="form_subject" value="Form footer">
+		            <!-- END Hidden Required Fields -->
+                    <input class=" contacts__form-input contacts__form-name" type="text" name="Имя" placeholder="Имя">
+                    <input class=" contacts__form-input contacts__form-phone" type="phone" name="Телефон" placeholder="Телефон">
                     <button class="contacts__form-btn" type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
                 </form>
             </div>
             <img class="contacts__images" src="images/contacts_images.jpg" alt="contacts__images">
             </div>
-           
        </div>
    </section>
+   
+   <footer class="footer">
+       <div class="container">
+           <div class="footer__inner">
+               <div class="footer__contacts">
+                   <div class="footer__contacts-title">Contacts</div>
+                   <a class="footer__phone" href="tel:+380665557776">+38(066)555-777-6</a><br>
+                   <a class="footer__email" href="mailto:сappadocia.tours@gmail.com">сappadocia.tours@gmail.com</a>
+                   <div class="footer__social">
+                       <a href="https://www.youtube.com/" target="_blank">
+                           <img src="../Cappadocia/images/footer__youtube-icon.svg" alt="youtube-icon">
+                       </a>
+                       <a href="https://www.facebook.com/" target="_blank">
+                           <img src="../Cappadocia/images/footer__facebook-icon.svg" alt="facebook-icon">
+                       </a>
+                       <a href="https://www.instagram.com/" target="_blank">
+                           <img src="../Cappadocia/images/footer__instagram-icon.svg" alt="instagram-icon">
+                       </a>
+                   </div>
+               </div>
+               <div class="footer__text">Dreams come true</div>
+           </div>
+       </div>
+   </footer>
   
   
   

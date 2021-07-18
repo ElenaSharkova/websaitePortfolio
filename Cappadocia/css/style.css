@@ -307,20 +307,184 @@ ul{
 
 .contacts__inner{
     display: flex;
+    justify-content: space-between;
 }
 
-.contacts__data{
-    margin-bottom: 2px;/*отступ снизу*/
-    margin-left: 100px;/*искуственно двигаем контент*/
+.contacts__content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
-.contacts__data span{
-    margin-left: 140px;/*искуственно двигаем контент*/
+
+.contacts__date,
+.contacts__price{
+    font-family: "balqis";
+    font-size: 96px;
+    color: #E2AB3F;
+    font-weight: 300;
+    line-height: 100px;
+    
 }
 
 .contacts__price{
-    margin-left: 230px;/*искуственно двигаем контент*/
+    margin-left: 120px;
 }
+
+.contacts__date{
+    margin-bottom: 20px;
+}
+
+.contacts__date span,
 .contacts__price span{
-    margin-left: 120px;/*искуственно двигаем контент*/
-    margin-top: -30px;/*искуственно двигаем контент*/
+    display: block; /*чтобы элементы разнеслись по разным строкам*/
+    color: #000;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'RobotoCondensed-Light';
+    margin-top: -10px;
 }
+
+.contacts__date span{
+    margin-left: 235px;
+}
+
+.contacts__price span{
+    margin-left: 205px;
+}
+
+.contacts__form{
+    max-width: 383px;
+    margin: 0 auto;
+}
+
+
+.contacts__form-title {
+    font-family: 'RobotoCondensed-Regular';
+    margin-bottom: 50px;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.contacts__form-input{
+    border: 1px solid #E2AB3F;
+    display: block;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 100%;
+    padding: 0 31px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: 'RobotoCondensed-Light';
+    color: #000; /*задать цвет текста, которым мы набираем поле ввода*/
+}
+
+.contacts__form-input::placeholder{
+    color: #000; /*задать цвет текста, который прописан по умолчанию внутри полей ввода*/
+}
+
+.contacts__form-name {
+    
+}
+.contacts__form-phone {
+    
+}
+.contacts__form-btn {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    font-family: 'RobotoCondensed-Light';
+    border: 1px solid #E2AB3F;
+    background-color: transparent; /*сделать кнопочку как бы прозрачной чтобы она была цвета фона, на котором она располагается*/
+    padding: 11px 45px;
+    cursor: pointer;
+}
+
+.footer {
+    background-image: url('../images/footer-bg.jpg'); /*Добавили фоновую картинку*/
+    height: 100vh; /*100% высота картинки*/
+    background-repeat: no-repeat; /*запрещаем картинке повторяться*/
+    background-size: cover;/*для растягивания картинки по размеру конкретного экрана*/
+    background-position: bottom center; /*Отцентрировать картинку и подтянуть все что не видно внизу*/
+    padding-top: 96px;
+}
+
+
+
+
+.container {
+}
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.footer__contacts {
+    width: 356px;/*Задали размеры области в которой будет помещаться шар, чтобы шар не обрезался и помещался полностью и корректно*/
+    height: 527px;/*Задали размеры области в которой будет помещаться шар, чтобы шар не обрезался и помещался полностью и корректно*/
+    background-image: url('../images/footer__contacts-bg.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    
+}
+.footer__contacts-title {
+    font-family: "balqis";
+    font-size: 86px;
+    line-height: 115px;
+    color: #E2AB3F;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    
+}
+.footer__phone,
+.footer__email {
+    color: #000;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    display: inline-block;/*разнести по разным строчкам иначе margin-bottom: 20px; внизу работать не будет*/
+    padding-left: 40px; /*зарезервированное место под значки*/
+    position: relative;
+}
+
+.footer__phone{
+    margin-bottom: 20px;
+}
+/*ниже все делается для вставки иконок рядом с текстом*/
+
+.footer__phone::before,
+.footer__email::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 30px;/*размеры области в которую будем вставлять icon*/
+    height: 30px;/*размеры области в которую будем вставлять icon*/
+    top: -5px;
+}
+
+.footer__phone::before{
+    background-image: url(../images/footer__phone-icon.svg);
+}
+
+.footer__email::before {
+    background-image: url(../images/footer__email-icon.svg);
+}
+
+.footer__social {
+    
+margin-top: 38px; 
+}
+.footer__social a {
+    margin: 0 7px;
+}
+.footer__text {
+    font-family: "balqis";
+    font-size: 86px;
+    line-height: 115px;
+    padding-top: -150px;
+    
+}
+
+
