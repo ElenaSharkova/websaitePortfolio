@@ -108,8 +108,15 @@
            <div class="footer__inner">
                <form class="footer__form" action="">
                    <h4 class="footer__form-title">Оставить заявку или задать вопрос</h4>
-                   <input class="contact__form-input footer__form-name" type="text" placeholder="Имя" >
-                   <input class="contact__form-input footer__form-phone" type="phone" placeholder="Телефон" >
+                   
+                   <!-- Hidden Required Fields -->
+		           <input type="hidden" name="project_name" value="Portfolio">
+		           <input type="hidden" name="admin_email" value="lena.sharkova.97@inbox.ru">
+		           <input type="hidden" name="form_subject" value="Form">
+		           <!-- END Hidden Required Fields -->
+                   
+                   <input class="contact__form-input footer__form-name" name="Имя" type="text" placeholder="Имя" >
+                   <input class="contact__form-input footer__form-phone" name="Телефон" type="phone" placeholder="Телефон" >
                    <button class="footer__form-btn" type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
                </form>
                <div class="footer__contacts">
@@ -118,7 +125,7 @@
                    <a class="footer__email" href="mailto:sharkova.ev@phystech.edu">sharkova.ev@phystech.edu</a>
                    <div class="footer__social">
                        <a class="footer__social-github" href="https://github.com/ElenaSharkova" target="_blank">
-                           <img src="../websaitePortfolio/images/footer__github-icon.svg" alt="github-icon" >
+                           <img src="images/footer__github-icon.svg" alt="github-icon" >
                        </a>
                    </div>
                    
