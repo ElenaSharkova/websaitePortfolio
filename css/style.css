@@ -4,6 +4,14 @@
     box-sizing: border-box; /*чтобы margin и padding не изменяли заданный размер контейнера*/
 }
 @font-face{
+    font-family: "balqis";
+    src: url('../fonts/alqis.woff2') format("woff2"),
+         url('../fonts/balqis.woff') format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap; /*сначала подгружаются шрифты, которые есть на компе, а потом наши*/
+}
+@font-face{
     font-family: 'RobotoCondensed-Light';
     src: url('../fonts/RobotoCondensed-Light.woff2') format("woff2"),
          url('../fonts/RobotoCondensed-Light.woff') format("woff");
@@ -137,7 +145,7 @@ a{
 .footer{
     background-color: #C4C4C4;
     margin-top: 60px;
-    padding: 20px 15px;
+    padding: 50px 15px;
 }
 .footer__inner{
     display: flex;
@@ -149,6 +157,7 @@ a{
 .footer__form{
     max-width: 383px;
     margin: 0 auto;
+    padding-top: 20px;
 }
 
 .footer__form-title{
@@ -163,7 +172,7 @@ a{
     display: block;
     border: 1px solid #888888;
     margin-bottom: 20px;
-    height: 30px; /*высота полей ввода*/
+    height: 40px; /*высота полей ввода*/
     width: 100%;
     padding: 0 21px; /*Отступы внутри инпута*/
     font-size: 14px; /*Свойства текста внутри инпута*/
@@ -193,17 +202,65 @@ a{
     cursor: pointer; /*Чтобы при наведении на кнопку появлялась рука у курсора*/
 }
 
+.footer__contacts{
+    width: 356px;/*задаем размеры, чтобы картинка отображалась в размерах как на макете*/
+    height: 527px;/*задаем размеры, чтобы картинка отображалась в размерах как на макете*/
+    padding-top: 50px;
+    padding-right: 40px;
+    background-image: url(../images/footer__contact.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: 350px;
+}
 
+.footer__contacts-title{
+    font-family: "balqis";
+    font-size: 86px;
+    line-height: 115px;
+    color: #C4C4C4;
+    margin-bottom: 50px;
+    
+}
 
+.footer__phone,
+.footer__email{
+    font-size: 18px;
+    line-height: 21.09px;
+    display: inline-block;
+    padding-left: 40px;
+    position: relative;
+    
+}
+.footer__phone{
+    margin-bottom: 20px;
+}
+.footer__phone::before,
+.footer__email::before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 0;
+    top: -5px;
+}
 
+.footer__phone::before{
+    background-image: url(../images/footer__phone-icon.svg);
+}
 
+.footer__email::before{
+    background-image: url(../images/footer__mail-icon.svg);
+    background-repeat: no-repeat;
+}
 
+.footer__social{
+    margin-top: 38px;
+}
 
-
-
-
-
-
+.footer__social-github{
+     width: 30px;/*задаем размеры, чтобы картинка отображалась в размерах как на макете*/
+     height: 30px;
+}
 
 
 
